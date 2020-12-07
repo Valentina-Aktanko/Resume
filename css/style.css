@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 * {
   --color-white: #ffffff;
   --color-extra-light-gray: #f5f7fa;
@@ -19,17 +26,21 @@ body {
 }
 
 .container {
+  display: -ms-grid;
   display: grid;
-  grid-template-areas:
+      grid-template-areas:
     "sidebar about"
     "sidebar projects"
     "sidebar experience"
     "sidebar education";
-  column-gap: 40px;
+  -webkit-column-gap: 40px;
+     -moz-column-gap: 40px;
+          column-gap: 40px;
   margin: 40px auto;
   width: 1200px;
   background-color:  var(--color-white);
-  box-shadow: 5px 8.66px 20px 0px var(--color-black-015);
+  -webkit-box-shadow: 5px 8.66px 20px 0px var(--color-black-015);
+          box-shadow: 5px 8.66px 20px 0px var(--color-black-015);
 }
 
 .visually-hidden {
@@ -67,15 +78,24 @@ body {
 }
 
 .about {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   grid-area: about;
   padding: 103px 50px 20px;
   margin-bottom: 15px;
 }
 
 .about__profession {
-  order: -1;
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
 }
 
 .about__text {
@@ -84,6 +104,8 @@ body {
 }
 
 .projects {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
   grid-area: projects;
   padding: 20px 50px;
   margin-bottom: 6px;
@@ -115,11 +137,15 @@ body {
 .projects__link:hover,
 .projects__link:focus {
   color: var(--color-orange);
+  -webkit-transition: color 0.3s;
+  -o-transition: color 0.3s;
   transition: color 0.3s;
 }
 
 .projects__link:active {
   color: var(--color-black);
+  -webkit-transition: color 0.3s;
+  -o-transition: color 0.3s;
   transition: color 0.3s;
 }
 
@@ -137,6 +163,8 @@ body {
 }
 
 .experience {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
   grid-area: experience;
   padding: 20px 50px;
   margin-bottom: 5px;
@@ -181,6 +209,8 @@ body {
 }
 
 .education {
+  -ms-grid-row: 4;
+  -ms-grid-column: 3;
   grid-area: education;
   padding: 20px 50px;
 }
@@ -205,8 +235,16 @@ body {
 }
 
 .sidebar {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 4;
+  -ms-grid-column: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   grid-area: sidebar;
   padding: 40px 0;
   color: var(--color-white);
