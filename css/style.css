@@ -1,0 +1,265 @@
+* {
+  --color-white: #ffffff;
+  --color-extra-light-gray: #f5f7fa;
+  --color-light-gray: #a8a8a8;
+  --color-gray: #595959;
+  --color-dark-blue: #1e2939;
+  --color-black: #000000;
+  --color-black-015: rgba(0, 0, 0, 0.15);
+  --color-orange: #ff6b08;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--color-gray);
+  background-color: var(--color-extra-light-gray);
+}
+
+.container {
+  display: grid;
+  grid-template-areas:
+    "sidebar about"
+    "sidebar projects"
+    "sidebar experience"
+    "sidebar education";
+  column-gap: 40px;
+  margin: 40px auto;
+  width: 1200px;
+  background-color:  var(--color-white);
+  box-shadow: 5px 8.66px 20px 0px var(--color-black-015);
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--color-black);
+  text-transform: capitalize;
+}
+
+.title--main {
+  font-size: 45px;
+  line-height: 83px;
+}
+
+.title--section {
+  font-size: 22px;
+}
+
+.title--subtitle {
+  font-size: 16px;
+}
+
+.text-accent {
+  color: var(--color-orange);
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  grid-area: about;
+  padding: 103px 50px 20px;
+  margin-bottom: 15px;
+}
+
+.about__profession {
+  order: -1;
+}
+
+.about__text {
+  max-width: 550px;
+  margin: 0;
+}
+
+.projects {
+  grid-area: projects;
+  padding: 20px 50px;
+  margin-bottom: 6px;
+}
+
+.projects__title {
+  margin-bottom: 5px;
+}
+
+.projects__list {
+  margin: 0;
+  padding: 0 18px;
+}
+
+.projects__item {
+  padding-left: 5px;
+}
+
+.projects__item::marker {
+  font-weight: 700;
+  color: var(--color-black);
+}
+
+.projects__link {
+  color: var(--color-gray);
+  text-decoration: none;
+}
+
+.projects__link:hover,
+.projects__link:focus {
+  color: var(--color-orange);
+  transition: color 0.3s;
+}
+
+.projects__link:active {
+  color: var(--color-black);
+  transition: color 0.3s;
+}
+
+.projects__tech::before,
+.projects__tech::after {
+  font-weight: 700;
+}
+
+.projects__tech::before {
+  content: '[ ';
+}
+
+.projects__tech::after {
+  content: ' ]';
+}
+
+.experience {
+  grid-area: experience;
+  padding: 20px 50px;
+  margin-bottom: 5px;
+}
+
+.experience__title {
+  margin-bottom: 12px;
+}
+
+.experience__subtitle {
+  margin-bottom: 5px;
+}
+
+.experience__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.experience__item {
+  margin-bottom: 14px;
+}
+
+.experience__item:last-child {
+  margin-bottom: 0;
+}
+
+.experience__date-interval {
+  margin-bottom: 3px;
+  font-size: 12px;
+  color: var(--color-light-gray);
+}
+
+.experience__country::before {
+  content: ' | ';
+  color: var(--color-black);
+}
+
+.experience__achievements {
+  padding-left: 18px;
+  list-style-type: disc;
+}
+
+.education {
+  grid-area: education;
+  padding: 20px 50px;
+}
+.education__title {
+  margin-bottom: 12px;
+}
+
+.education__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.education__faculty {
+  font-weight: 700;
+  color: var(--color-black);
+}
+
+.education__country::before {
+  content: ' | ';
+  color: var(--color-black);
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  grid-area: sidebar;
+  padding: 40px 0;
+  color: var(--color-white);
+  background-color: var(--color-dark-blue);
+}
+
+.sidebar .title {
+  color: var(--color-white);
+}
+
+.contacts {
+  padding: 12px 40px;
+  margin-bottom: 24px;
+}
+
+.contacts__title {
+  margin-bottom: 10px;
+}
+
+.contacts a {
+  text-decoration: none;
+  color: var(--color-white);
+  opacity: 0.5;
+}
+
+.contacts__phone,
+.contacts__email {
+  margin: 0;
+}
+
+.contacts__email a {
+  text-decoration: underline;
+}
+
+.contacts__tag {
+  margin-right: 10px;
+  font-weight: 700;
+}
+
+.skills {
+  padding: 12px 40px;
+  margin-bottom: 21px;
+}
+
+.skills__title {
+  margin-bottom: 10px;
+}
+
+.skills__list {
+  margin: 0;
+  padding: 0 15px;
+}
+
+.skills__item::marker {
+  color: var(--color-orange);
+}
